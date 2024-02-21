@@ -8,5 +8,5 @@
 
 
 
-https://github.com/Shan2575/BlogSite-Project/assets/142747478/6272eccf-022a-4d6f-a656-626d78535923
+https://github.com/Shan2575/BlogSite-Project/assets/142747478/BlogSite Demo
 
