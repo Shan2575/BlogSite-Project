@@ -6,7 +6,4 @@
 
 
 
-
-
-https://github.com/Shan2575/BlogSite-Project/assets/142747478/BlogSite Demo
-
+https://github.com/Shan2575/BlogSite-Project/assets/142747478/873739d4-6d37-4338-b6c8-59209710b0aa
