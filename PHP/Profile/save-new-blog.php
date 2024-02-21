@@ -1,6 +1,6 @@
 <?php
 
-include "dbConnection.php";
+include "../dbConnection.php";
 
 session_start();
 
@@ -20,4 +20,4 @@ $sql->bind_param("sssss", $user_ID, $blogTitle, $blogDesc, $dateCreated, $blogIm
 
 $sql->execute();
 
-include "./profile.php";
+header('Location: profile.php');

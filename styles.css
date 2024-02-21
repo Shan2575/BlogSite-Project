@@ -8,10 +8,6 @@ body {
   background-color: rgb(20 9 65);
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
 header {
   background: linear-gradient(
       to right bottom,

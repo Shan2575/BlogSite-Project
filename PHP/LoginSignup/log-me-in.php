@@ -1,6 +1,6 @@
 <?php
 
-include('dbConnection.php');
+include('../dbConnection.php');
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -22,7 +22,7 @@ if ($results->num_rows > 0) {
         $_SESSION['email'] = $row["email"];
         $_SESSION['pwd'] = $row["pwd"];
         $_SESSION['bio'] = $row["bio"];
-        header("Location: ./profile.php");
+        header("Location: ../Profile/profile.php");
     }
 } else {
     header("Location: ./login.php");

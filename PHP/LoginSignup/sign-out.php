@@ -1,6 +1,6 @@
 <?php
 
-include "check-auth.php";
+include "../check-auth.php";
 
 if (isset($_SERVER['HTTP_COOKIE'])) {
     $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
@@ -12,4 +12,4 @@ if (isset($_SERVER['HTTP_COOKIE'])) {
     }
 }
 session_destroy();
-header("Location: ./index.php");
+header("Location: ../index.php");

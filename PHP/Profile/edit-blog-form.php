@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlogSite - New Blog</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>BlogSite - Edit Blog</title>
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body>
@@ -15,9 +15,9 @@
 
         </div>
         <nav>
-            <a href="./home.php">Home</a>
+            <a href="../home.php">Home</a>
             <a href="./profile-validate.php">Profile</a>
-            <a href="./">Sign Out</a>
+            <a href="../LoginSignup/sign-out.php">Sign Out</a>
         </nav>
     </header>
 
@@ -25,27 +25,27 @@
     </div>
 
     <main>
-        <form id="new-blog-form" action="./save-new-blog.php" method="post">
+        <form id="edit-blog-form" action="./save-editted-blog.php" method="post">
+            <input type="hidden" name="blogID" value="<?php session_start();
+                                                        echo "{$_SESSION['blogID']}"; ?>">
         </form>
         <div id="blog-container">
             <div id="blog-cover-image-container">
-                <input type="file" name="blogImage" form="new-blog-form">
+                <input type="file" name="blogImage" value="<?php echo "{$_SESSION['blogImage']}"; ?>" form="edit-blog-form">
             </div>
             <div id="blog-border">
                 <div id="blog-title">
                     <div>
                         <label for="blogTitle">Title:</label>
-                        <input type="text" name="blogTitle" form="new-blog-form" maxlength="20" required>
-
-                        <input type="hidden" name="dateCreated" id="dateCreated" form="new-blog-form">
+                        <input type="text" name="blogTitle" form="edit-blog-form" value="<?php echo "{$_SESSION['blogTitle']}"; ?>" maxlength="20">
                     </div>
 
                     <div id="blog-options">
-                        <button type="submit" form="new-blog-form">Save Blog</button>
+                        <button type="submit" form="edit-blog-form">Save Blog</button>
                     </div>
                 </div>
                 <div id="blog-content">
-                    <textarea name="blogDesc" form="new-blog-form" required></textarea>
+                    <textarea name="blogDesc" form="edit-blog-form"><?php echo "{$_SESSION['blogDesc']}"; ?></textarea>
                 </div>
             </div>
 
@@ -53,9 +53,9 @@
     </main>
 
     <?php
-    include "./footer.php";
+    include "../footer.php";
     ?>
-    <script src='./getCurrentDate.js'></script>
+
 </body>
 
 </html>

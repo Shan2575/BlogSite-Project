@@ -1,6 +1,6 @@
 <?php
 
-include('dbConnection.php');
+include 'dbConnection.php';
 
 $userID = $_SESSION['userID'];
 
@@ -15,9 +15,9 @@ $allRows = $results->fetch_all();
 if (count($allRows) > 0) {
     foreach ($allRows as $row) {
         if ($row[5] !== "") {
-            $blogImage = "<img id='saved-blog-image' src='./images/{$row[5]}'>";
+            $blogImage = "<img id='saved-blog-image' src='../images/{$row[5]}'>";
         } else {
-            $blogImage = "<img id='default-blog-image' src='./images/default-blog-image.png'>";
+            $blogImage = "<img id='default-blog-image' src='../images/default-blog-image.png'>";
         }
 
         echo "
@@ -34,7 +34,7 @@ if (count($allRows) > 0) {
                 </div>
             </div>
             
-            <form id='view-blog-form{$row[0]}' action='./view-blog.php' method='post'>
+            <form id='view-blog-form{$row[0]}' action='../Profile/view-blog.php' method='post'>
                 <input type='hidden' name='blogID' value='{$row[0]}'>                        
             </form>
             ";

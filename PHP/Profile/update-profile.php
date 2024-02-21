@@ -1,6 +1,6 @@
 <?php
 
-include "dbConnection.php";
+include "../dbConnection.php";
 
 $userID = $_POST['userID'];
 $fname = $_POST['fname'];
@@ -16,4 +16,4 @@ $sql->bind_param('ssssss', $fname, $lname, $email, $password, $bio, $userID);
 $sql->execute();
 
 
-include "./log-me-in.php";
+include "../LoginSignup/log-me-in.php";

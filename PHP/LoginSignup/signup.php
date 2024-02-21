@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogSite - Sign up</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body>
     <header>
         <div id="header-logo">
             <a href="./">
-                <img id="arrow-back-img" src="./images/arrow.png">
+                <img id="arrow-back-img" src="../../images/arrow.png">
                 <p>Back to Home</p>
             </a>
         </div>
@@ -36,7 +36,7 @@
             </div>
             <div class="partition"></div>
             <div id="signup-right">
-                <img class="logo-img" id="logo-img-signup" src="./images/website-logo.png">
+                <img class="logo-img" id="logo-img-signup" src="../../images/website-logo.png">
                 <form class="login-form" id="signup-form" action="./add-user.php" method="post">
                     <label for="fname">First Name:</label><br>
                     <input type="text" name="fname" placeholder="Enter your first name here" required><br>
@@ -53,7 +53,7 @@
 
     </main>
     <?php
-    include "./footer.php";
+    include "../footer.php";
     ?>
 
 </body>

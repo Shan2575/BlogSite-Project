@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogSite - Blog View</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body>
     <header>
         <div id="header-logo">
             <a href="./newsfeed.php">
-                <img class="logo-img" src="./images/website-logo.png"></a>
+                <img class="logo-img" src="../../images/website-logo.png"></a>
         </div>
         <nav>
-            <a href="./home.php">Home</a>
+            <a href="../home.php">Home</a>
             <a href="./profile-validate.php">Profile</a>
-            <a href="./">Sign Out</a>
+            <a href="../LoginSignup/sign-out.php">Sign Out</a>
         </nav>
     </header>
 
@@ -36,10 +36,9 @@
             <div id="blog-cover-image-container">
                 <?php
                 if ($_SESSION['blogImage'] !== "") {
-                    echo "<img id='blog-img' src='./images/{$_SESSION['blogImage']}'>
-                    ";
+                    echo "<img id='blog-img' src='../../images/{$_SESSION['blogImage']}'>";
                 } else {
-                    echo "<img id='profile-img'  src='./images/default-blog-image.png'>";
+                    echo "<img id='profile-img'  src='../../images/default-blog-image.png'>";
                 }
                 ?>
 
@@ -75,7 +74,7 @@
     </main>
 
     <?php
-    include "./footer.php";
+    include "../footer.php";
     ?>
 
 </body>

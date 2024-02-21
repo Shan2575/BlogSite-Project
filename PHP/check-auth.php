@@ -4,5 +4,5 @@ if (!isset($_SESSION)) {
 }
 
 if (!isset($_COOKIE['authenticated'])) {
-    header('Location: ./login.php');
+    header('Location: ./LoginSignup/login.php');
 }

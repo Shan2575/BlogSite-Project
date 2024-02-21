@@ -1,6 +1,6 @@
 <?php
 
-include('dbConnection.php');
+include 'dbConnection.php';
 
 
 $sql = $connection->prepare("SELECT * FROM blogs WHERE 1");
@@ -13,9 +13,9 @@ $allRows = $results->fetch_all();
 if (count($allRows) > 0) {
     foreach ($allRows as $row) {
         if ($row[5] !== "") {
-            $blogImage = "<img src='./images/{$row[5]}'>";
+            $blogImage = "<img src='../images/{$row[5]}'>";
         } else {
-            $blogImage = "<img id='default-blog-image' src='./images/default-blog-image.png'>";
+            $blogImage = "<img id='default-blog-image' src='../images/default-blog-image.png'>";
         }
         echo "
         <div class='home-main-card' onclick=\"document.forms['view-blog-form{$row[0]}'].submit();\">
@@ -37,7 +37,7 @@ if (count($allRows) > 0) {
                 </div>
             </div>
         </div>
-        <form id='view-blog-form{$row[0]}' action='./view-blog.php' method='post'>
+        <form id='view-blog-form{$row[0]}' action='./Profile/view-blog.php' method='post'>
                 <input type='hidden' name='blogID' value='{$row[0]}'>                        
             </form>
         ";
